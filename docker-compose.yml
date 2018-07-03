@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  gitlab-runner:
+    image: rbsdev/gitlab-runner
+    build: .
+    deploy:
+      mode: 'replicated'
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 2s
+        failure_action: rollback
+        order: start-first
+    volumes:
+      - ./:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      GIT_SSL_NO_VERIFY: $GIT_SSL_NO_VERIFY
+      GITLAB_SERVER: $GITLAB_SERVER
+      GITLAB_TOKEN: $GITLAB_TOKEN
+      COMMA_SEPARATED_TAGS: $COMMA_SEPARATED_TAGS
