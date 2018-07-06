@@ -4,7 +4,7 @@ GitLab Runner
 This is an extension of image `gitlab/gitlab-runner`.
 
 Supported tags and respective `Dockerfile` links
---------------------------------------------------
+------------------------------------------------
 
 - [`latest`, `ubuntu` (*Dockerfile*)](http://github.com/rbsdev/gitlab-runner/blob/develop/Dockerfile)
 
