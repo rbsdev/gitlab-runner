@@ -19,6 +19,8 @@ gitlab-runner register \
   --non-interactive \
   --executor "docker" \
   --env "GIT_SSL_NO_VERIFY=${GIT_SSL_NO_VERIFY}" \
+  --env "http_proxy=${http_proxy}" \
+  --env "https_proxy=${https_proxy}" \
   --docker-image alpine \
   --url ${GITLAB_URL} \
   --registration-token ${GITLAB_TOKEN} \
