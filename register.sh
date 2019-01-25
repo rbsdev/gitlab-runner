@@ -9,6 +9,7 @@ gitlab-runner unregister --all-runners
 gitlab-runner register \
   --docker-disable-cache \
   --docker-volumes /var/run/docker.sock:/var/run/docker.sock \
+  --docker-volumes ${SRC_VOLUME}:${DST_VOLUME} \
   --non-interactive \
   --executor "docker" \
   --env "GIT_SSL_NO_VERIFY=${GIT_SSL_NO_VERIFY}" \
