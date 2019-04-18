@@ -24,3 +24,5 @@ services:
       COMMA_SEPARATED_TAGS: $COMMA_SEPARATED_TAGS
       SRC_VOLUME: $SRC_VOLUME
       DST_VOLUME: $DST_VOLUME
+      http_proxy: $http_proxy
+      https_proxy: $https_proxy
