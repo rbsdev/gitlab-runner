@@ -24,9 +24,11 @@ Environment
 
 A set of environment variables could be used
 
-| Name                 | Default    |
-|----------------------|------------|
-| GITLAB_SERVER        | gitlab.com |
-| GITLAB_TOKEN         | empty      |
-| COMMA_SEPARATED_TAGS | docker     |
-| GIT_SSL_NO_VERIFY    | empty      |
+| Name                 | Default    | Description                                                         |
+|----------------------|------------|---------------------------------------------------------------------|
+| GITLAB_SERVER        | gitlab.com | Gitlab server to connect                                            |
+| GITLAB_TOKEN         | empty      | Token required by server                                            |
+| COMMA_SEPARATED_TAGS | docker     | Tags to register the runner                                         |
+| GIT_SSL_NO_VERIFY    | empty      | Environment variable                                                |
+| SRC_VOLUME           | empty      | Source directory to mount volume (requires to fill DST_VOLUME)      |
+| DST_VOLUME           | empty      | Destination directory to mount volume (requires to fill DST_VOLUME) |
