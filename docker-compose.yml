@@ -3,6 +3,7 @@ services:
   gitlab-runner:
     image: rbsdev/gitlab-runner
     build: .
+    hostname: local-test
     deploy:
       mode: 'replicated'
       replicas: 1
@@ -14,8 +15,12 @@ services:
     volumes:
       - ./:/etc/gitlab-runner
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./register.sh:/register.sh
     environment:
+      DEBUG: $DEBUG
       GIT_SSL_NO_VERIFY: $GIT_SSL_NO_VERIFY
       GITLAB_SERVER: $GITLAB_SERVER
       GITLAB_TOKEN: $GITLAB_TOKEN
       COMMA_SEPARATED_TAGS: $COMMA_SEPARATED_TAGS
+      SRC_VOLUME: $SRC_VOLUME
+      DST_VOLUME: $DST_VOLUME
