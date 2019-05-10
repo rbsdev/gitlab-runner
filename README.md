@@ -32,3 +32,5 @@ A set of environment variables could be used
 | GIT_SSL_NO_VERIFY    | empty      | Environment variable                                                |
 | SRC_VOLUME           | empty      | Source directory to mount volume (requires to fill DST_VOLUME)      |
 | DST_VOLUME           | empty      | Destination directory to mount volume (requires to fill DST_VOLUME) |
+| http_proxy           | empty      | Set proxy on runner                                                 |
+| https_proxy          | empty      | Set proxy on runner                                                 |
